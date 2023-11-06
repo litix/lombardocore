@@ -1,0 +1,10 @@
+.components-checkbox-control__input[type=checkbox].components-checkbox-control__input--indeterminate {
+  background: var(--wp-admin-theme-color);
+  border-color: var(--wp-admin-theme-color);
+}
+.components-checkbox-control__input[type=checkbox].components-checkbox-control__input--indeterminate::-ms-check {
+  opacity: 0;
+}
+.components-checkbox-control__input[type=checkbox].components-checkbox-control__input--indeterminate::before {
+  content: none;
+}/*# sourceMappingURL=style.css.map */

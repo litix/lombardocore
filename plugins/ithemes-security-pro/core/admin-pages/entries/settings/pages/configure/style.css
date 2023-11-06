@@ -1,0 +1,22 @@
+.itsec-configure-intro {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min-content, 250px));
+  grid-gap: 1rem;
+}
+
+.itsec-configure-module-links {
+  padding-top: 4px !important;
+  padding-bottom: 4px !important;
+}
+.itsec-configure-module-links ul {
+  margin: 0;
+}
+.itsec-configure-module-links li {
+  margin: 0;
+}
+.itsec-configure-module-links .components-button.is-link {
+  text-decoration: none;
+}
+.itsec-configure-module-links .components-button.is-link:first-child {
+  padding-left: 0;
+}/*# sourceMappingURL=style.css.map */

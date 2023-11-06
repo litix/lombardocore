@@ -1,0 +1,30 @@
+[data-version="ver-1"][data-assets*="gform-sub"] form {
+    display: flex;
+    gap: 10px;
+    align-items: flex-end;
+}
+
+[data-version="ver-1"][data-assets*="gform-sub"] .gform_body {
+    flex: 1;
+}
+
+[data-version="ver-1"][data-assets*="gform-sub"] .btn,
+[data-version="ver-2"][data-assets*="gform-sub"] .btn {
+    height: 45px;
+    padding: 5px 25px;
+}
+
+[data-version="ver-2"][data-assets*="gform-sub"] .gform {
+    padding: 30px;
+    background-color: rgba(0,0,0,0.1);
+}
+
+[data-version="ver-2"][data-assets*="gform-sub"] form {
+    display: block;
+}
+
+[data-version="ver-2"][data-assets*="gform-sub"] .gform_wrapper.gravity-theme .gfield.gfield--width-half {
+    grid-column: 1 / 13;
+}
+
+.gform_required_legend { display: none; }

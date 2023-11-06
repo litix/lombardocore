@@ -1,0 +1,107 @@
+/* STYLES */
+:root { 
+    --bglight   : white;
+    --textlight : white;
+    --border1   : #eeeeee;
+    --border2   : rgba(66, 75, 90, 0.5);
+}
+
+/* #region - AJAX GRID */
+
+[data-axpost] .tax-links,
+[data-axgrid] .tax-links { 
+    margin-bottom: 30px; 
+}
+[data-axpost] .tax-links ul,
+[data-axgrid] .tax-links ul { 
+    gap: 10px; 
+}
+[data-axpost] .tax-links ul .btn,
+[data-axgrid] .tax-links ul .btn {
+    background-color: white;
+}
+
+[data-axgrid] .cpt-row { 
+    row-gap: 30px; 
+}
+[data-axgrid] .cpt { 
+    background-color: white;
+    border: 1px solid var(--border1);
+    padding: 10px; 
+    display: block;
+}
+[data-axgrid] .cpt div[data-image="image-opt"], 
+[data-axgrid] .cpt div[data-image="image-none"], 
+[data-axgrid] .cpt div[data-image="image-thumb"] {
+    min-height: 200px;
+    margin-bottom: 20px;
+}
+
+[data-axgrid] .cpt .cpt-title {
+    margin-bottom: 0;
+    color: var(--color2);
+}
+
+[data-axgrid] .cpt .cat-links {
+    display: flex;
+    gap: 10px;
+    font-size: 14px;
+}
+
+[data-axgrid] .ajax_category.active { 
+    background-color: #e5e5e5; 
+}
+
+[data-axpost] .ajax_category.active span,
+[data-axgrid] .ajax_category.active span {
+    color: white;
+}
+
+[data-axpost] .ajx_btn,
+[data-axgrid] .ajx_btn { 
+    margin-top: 50px; 
+}
+
+[data-axpost] [data-design="grid-1.0"] .div-meta {
+    padding-bottom: 0;
+}
+
+.dots {
+    width: 13.4px;
+    height: 13.4px;
+    background: var(--color2);
+    color: var(--color2);
+    border-radius: 50%;
+    box-shadow: 22.4px 0,-22.4px 0;
+    animation: dots-u8fzftmd 1s infinite linear alternate;
+    margin: 20px auto 0;
+}
+
+@keyframes dots-u8fzftmd {
+    0% {
+       box-shadow: 22.4px 0,-22.4px 0;
+       background: rgba(71,75,255,0.13);
+    }
+ 
+    33% {
+       box-shadow: 22.4px 0,-22.4px 0 rgba(71,75,255,0.13);
+       background: rgba(71,75,255,0.13);
+    }
+ 
+    66% {
+       box-shadow: 22.4px 0 rgba(71,75,255,0.13),-22.4px 0;
+       background: rgba(71,75,255,0.13);
+    }
+ }
+
+#iloader {
+    margin-top: 20px;
+    text-align: center;
+    height: 13.4px;
+}
+
+#iloader .dots {
+    display: none;
+}
+
+/* #endregion */

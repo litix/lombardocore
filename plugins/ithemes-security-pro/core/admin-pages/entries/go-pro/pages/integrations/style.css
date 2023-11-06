@@ -1,0 +1,6 @@
+.itsec-go-pro-integrations.components-flex {
+  align-items: center;
+}
+.itsec-go-pro-integrations.components-flex .itsec-go-pro-plans-grid:empty + * {
+  display: none;
+}/*# sourceMappingURL=style.css.map */

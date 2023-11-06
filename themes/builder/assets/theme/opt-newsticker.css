@@ -1,0 +1,84 @@
+.top-ticker {
+    background-color: #333;
+    position: relative;
+}
+
+.top-alert {
+    color: white;
+    position: relative;
+    max-width: 1200px; 
+    margin: 0 auto;
+    font-size: 15px;
+    padding: 7px 0px;
+    width: 100%;
+}
+
+.top-alert .owl-bg {
+    overflow: hidden;
+    width: calc(100% - 60px);
+    position: relative;
+}
+
+/* item */
+
+.top-alert .owl-bg .item {
+    padding: 0 25px 0 25px;
+}
+
+/* buttons */
+
+.top-alert .tick-btn {
+    background-color: transparent;
+    border: none;
+    top: -2px;
+    position: absolute;
+    z-index: 2;
+}
+
+.top-alert .tick-btn img {
+    width: 13px;
+    height: 13px;
+    opacity: 0.2;
+}
+
+.top-alert .tick-btn:hover img {
+    opacity: 0.8;
+}
+
+.top-alert .owl-prev { 
+    left: 0px;
+}
+
+.top-alert .owl-next {
+    left: unset;
+    right: 0px;
+}
+
+.top-alert .owl-next img {
+    transform: rotate(180deg);
+}
+
+/* closer */
+
+.top-alert .svg-close {
+    display: inline-flex;
+    align-items: center;
+    background-color: transparent;
+    border: none;
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.top-alert .svg-close svg {
+    color: white;
+    width: 17px;
+    height: 17px;
+}
+
+@media only screen and (max-width : 991px) { 
+    .top-alert .owl-bg { 
+        height: auto !important; 
+    }
+}

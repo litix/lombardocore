@@ -1,0 +1,17 @@
+.itsec-split-button {
+  display: inline-flex;
+  align-items: center;
+}
+.itsec-split-button .itsec-split-button__main {
+  border-radius: 0;
+}
+.itsec-split-button .itsec-split-button__dropdown {
+  display: inline-flex;
+}
+.itsec-split-button .itsec-split-button__dropdown .components-button {
+  border-radius: 0;
+}
+.is-small.itsec-split-button .itsec-split-button__dropdown .components-button {
+  width: 30px;
+  min-width: 0;
+}/*# sourceMappingURL=style.css.map */

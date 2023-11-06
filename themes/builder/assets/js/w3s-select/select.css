@@ -1,0 +1,59 @@
+.w3cs {
+    /* custom select */
+    position: relative;
+    font-weight: 300;
+    font-size: 17px;
+    border: 1px solid #E5E5E5;
+    background-image: url("data:image/svg+xml,%3Csvg width='13' height='7' viewBox='0 0 13 7' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.14822 0.368592C1.31467 0.183438 1.52948 0.198595 1.79264 0.414063L6.67543 4.55649L11.5778 0.437223C11.8419 0.223004 12.0568 0.208864 12.2224 0.394804L12.8506 1.09942C13.0259 1.30491 12.9864 1.51478 12.7319 1.72902L7.00756 6.57877C6.78251 6.76378 6.5579 6.76325 6.33373 6.57717L0.632367 1.70038C0.37897 1.48494 0.340405 1.27489 0.516671 1.07022L1.14822 0.368592Z' fill='%233F3A34' fill-opacity='0.5'/%3E%3C/svg%3E%0A");
+    background-repeat: no-repeat;
+    background-position: 95% center;
+    padding: 9px 16px 8px;
+    border-radius: 4px;
+    background-color: white;
+}
+.w3cs select {
+    display: none;
+}
+.w3cs .select-items div,
+.w3cs .select-selected {
+    cursor: pointer;
+}
+.w3cs .select-items div {
+    padding: 8px 16px;
+    border: 1px solid #E5E5E5;
+    border-bottom: none;
+    background-color: white;
+}
+.w3cs .select-items div:last-child {
+    border-bottom: 1px solid #E5E5E5;
+}
+.w3cs .select-selected:after {
+    position: absolute;
+    content: "";
+    top: 14px;
+    right: 10px;
+    width: 0;
+    height: 0;
+}
+.w3cs .select-selected.select-arrow-active:after {
+    border-color: transparent transparent #fff transparent;
+    top: 7px;
+}
+.w3cs .select-items {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    z-index: 99;
+}
+.w3cs .select-hide {
+    display: none;
+}
+.w3cs .select-items div:hover,
+.w3cs .same-as-selected {
+    background-color: var(--color1);
+    color: white;
+}
+.w3cs .same-as-selected {
+    background-color: var(--color1) !important;
+}

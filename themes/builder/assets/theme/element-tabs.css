@@ -1,0 +1,47 @@
+[data-design*="tab-1"] .tab-content {
+    border: 1px solid rgba(0,0,0,0.1);
+}
+
+[data-design*="tab-1"] .pad {
+    padding: 25px;
+}
+
+[data-design*="tab-1"] .ntabs {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+[data-design*="tab-1"] .ntabs li {
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+    padding: 10px 10px 10px 20px;
+    position: relative;
+}
+
+[data-design*="tab-1"] .ntabs li .ititle {
+    margin-bottom: 0;
+    font-size: inherit;
+}
+
+[data-design*="tab-1"] .ntabs li.active::before {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: block;
+    content: "";
+    top: 0;
+    left: 0;
+}
+
+[data-design*="tab-1"] .nav {
+    flex-direction: column;
+}
+
+[data-design*="tab-1"] .dimage {
+    min-height: 200px;
+    margin-bottom: 20px;
+}
+
+[data-design*="tab-1"] [aria-expanded="true"] .ititle {
+    color: #ccc;
+}

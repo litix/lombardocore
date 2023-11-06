@@ -1,0 +1,73 @@
+/*!
+Theme Name: Builder 3.3
+Theme URI: http://xxx.com/
+Author: Thomas Digital
+Author URI: https://www.thomasdigital.com
+Description: Parent Theme
+Version: 3.3
+License: GNU General Public License v2 or later
+License URI: LICENSE
+Text Domain: Thomas Digital
+Tags: wordpress, bootstrap, acf
+Developer : Billy
+*/
+
+.mh { 
+    min-height: 1000px; 
+}
+body:not(.wp-admin), .element {
+    font-family: 'Raleway';
+}
+/*
+body:not(.wp-admin) {
+    background: url(images/uploads/bg-1.jpg) center top no-repeat;
+}
+*/
+
+/* #region - General ---------------------- */
+/* #endregion */
+
+
+/* #region - Header ---------------------- */
+/* #endregion */
+
+/* #region - Element ---------------------- */
+
+/* #endregion */
+
+/* #region - Element ---------------------- */
+
+/* #endregion */
+
+/* #region - Element ---------------------- */
+
+/* #endregion */
+
+
+/* #region - Footer ---------------------- */
+footer { 
+    color: white;
+    background-color: #333; 
+    padding: 30px 0;
+    color: white;
+}
+footer .navbar-brand {
+    filter: brightness(0) invert(1);
+}
+/* #endregion */
+
+
+/* #region - Element ---------------------- */
+
+/* #endregion */
+
+/* #region - Element ---------------------- */
+
+/* #endregion */
+
+/* #region - Element ---------------------- */
+
+/* #endregion */
+
+
+.billy_ag { content: "3.1"; }

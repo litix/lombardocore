@@ -1,0 +1,40 @@
+/**
+ * Included when fields of this type are rendered for editing by publishers.
+ */
+.acf-field-FIELD-NAME .setting-font-size {
+    color: green;
+}
+
+.-hide-ny {
+    display: none;
+}
+
+.pop-media-field.field-preview {
+    width: 100%;
+    height: 220px;
+    padding: 10px;
+    background-color: #eee;
+    margin-bottom: 10px;
+    position: relative;
+    max-width: 350px;
+}
+
+.pop-media-field.field-preview img,
+.pop-media-field.field-preview video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    max-height: 100%;
+}
+
+.pop-media-field.field-preview .pop-note {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    z-index: 2;
+    display: inline-block;
+    color: white;
+    background-color: rgba(0,0,0,0.5);
+    padding: 5px 10px;
+    visibility: hidden;
+}

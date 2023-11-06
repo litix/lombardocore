@@ -1,0 +1,83 @@
+/*
+Theme Name: The Dev Team
+Theme URI: http://xxx.com/
+Template: builder
+Version: 3.3
+Updated: 10-01-2023
+Author: Thomas Digital
+Author URI: https://www.thomasdigital.com
+Description: Builder with drag and drop elements using wireframe kit design.
+Tags: wordpress, bootstrap, wireframe, acf
+*/
+
+/* */
+.mh { 
+    min-height: 2000px; 
+}
+
+body:not(.wp-admin) {
+    background: url(upload/bg-1.jpg) top center no-repeat;
+}
+/* */
+
+/* #region -------------- *STUB - ROOT */
+
+:root {
+
+    --font-size: 17px;
+    --font-1: "Ubuntu";
+    --font-2: "DM Serif Display";
+
+    --color1: #1B1B1B;
+
+    --color10: black;
+    --color11: white;
+
+    --a: #DDA15E;
+    --hover: #A1AEB7;       
+
+    --darktitle     :   white;
+    --darktext      :   white;
+}
+
+/* #endregion */
+
+/*------------------------------------------------*/
+
+/* #region -------------- *STUB - GENERAL */
+
+
+
+/* #endregion */
+
+/* #region -------------- *STUB - HEADER */
+
+
+
+/* #endregion */
+
+/* #region -------------- *STUB - FOOTER */
+
+
+
+/* #endregion */
+
+/*------------------------------------------------*/
+
+/* #region -------------- *SECTION -  */
+
+
+
+/* #endregion */
+
+/* #region -------------- *SECTION -  */
+
+
+
+/* #endregion */
+
+/* #region -------------- *SECTION -  */
+
+
+
+/* #endregion */

@@ -1,0 +1,140 @@
+
+@import './assets/css/partials/wordpress.css';
+@import './assets/css/partials/header.css';
+@import './assets/css/partials/footer.css';
+
+@import './assets/css/tw.css';
+@import './assets/css/gf.css';
+@import './assets/css/base.css';
+
+@import './assets/css/theme-fonts.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  .element p {
+    margin-bottom: 30px;
+  }
+}
+
+@layer components {
+
+  .tw-heading {
+    @apply text-[#0059a0] font-barlow !text-[16px] font-medium leading-[120%] tracking-[3.2px] uppercase;
+  }
+
+  .tw-title {
+    @apply text-[#002644] font-barlow !text-dynamic font-[700] leading-[120%];
+  }
+  
+  .tw-description {
+    @apply text-[#777] font-inter text-[18px] font-[400] leading-[150%];
+  }
+
+  .btn-top {
+    @apply !py-[15px] !px-[20px] !text-white;
+  }
+
+  .btn-1 {
+    @apply !border-[1px] !border-[transparent] !border-[#ccc] !rounded-none px-[25px] py-5 !bg-transparent text-[#0090CC] text-base font-inter uppercase  font-[500] m-0 grow-0  inline-flex  justify-start items-start gap-2.5
+    after:!bg-[#0090CC]
+    hover:bg-[#0090CC] hover:!text-white
+    focus:ring-blue-400 focus:ring-opacity-75 
+    !transition-all !ease-in !duration-300;
+  }
+
+  .btn-2 {
+    @apply !border-[1px] !border-[transparent] !border-[#ccc] !rounded-none px-[25px] py-5 !bg-transparent !text-[#0090CC] text-base font-inter uppercase  font-[500] m-0 grow-0  inline-flex  justify-start items-start gap-2.5 after:!bg-[#0090CC] hover:!bg-[#FFF] hover:!text-[#0090CC] hover:after:!bg-[transparent] focus:ring-blue-400 focus:ring-opacity-75 !transition-all !ease-in !duration-300;
+  }
+
+  .btn-3 {
+    @apply !border-[1px] !border-[#0059A0] !rounded-none !bg-transparent
+    px-[25px] py-5  text-base font-inter uppercase !text-[#FFF] font-[500] m-0 
+    inline-flex gap-2.5 justify-start grow-0 items-start 
+    after:!bg-[#0090CC]
+    hover:!bg-[#0059A0] hover:!text-[#FFF] hover:after:!bg-[transparent] 
+    focus:ring-blue-400 focus:ring-opacity-75 
+    !transition-all !ease-in !duration-300;
+  }
+
+  .absolute-center {
+    @apply absolute w-full h-full top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2;
+  }
+
+  .tw-border {
+    @apply w-[60px] h-[3px] my-[25px] mx-0 bg-[#0588bf];
+  }
+
+  .site-container {
+    @apply max-w-[1200px] mx-auto my-0 w-full px-[15px] relative z-10;
+  }
+
+  .tw-layout {
+    @apply grid grid-cols-12 gap-[30px];
+  }
+
+  .tw-overlay {
+    @apply absolute top-0 left-0 z-[-1] h-full  w-full !bg-no-repeat !bg-cover;
+  }
+
+  .banner-overlay {
+    @apply absolute top-0 left-0 w-full max-h-[810px] h-full overflow-hidden bg-center bg-cover bg-no-repeat 
+    before:absolute before:left-0 before:top-0 before:z-10  before:w-full before:max-h-[552px] before:h-full 
+    before:mix-blend-multiply before:bg-gradient-to-b before:from-slate-900 
+    after:w-full after:max-h-[468px] after:h-full after:left-0 after:bottom-0 after:absolute after:mix-blend-multiply after:bg-gradient-to-t after:from-slate-900;
+  }
+
+  .ruler {
+    @apply outline-1 outline outline-red-500;
+  }
+
+}
+
+/* Contact Form */
+
+.gform_button {
+  @apply !bg-[#0090CC] !text-white;
+}
+
+.element textarea {
+  @apply py-[11px] px-[35.91px];
+}
+
+.single {
+  header {
+    background: #002644;
+  }
+}
+
+
+/*Extra*/
+
+.play-button {
+  width: 75px;
+  height: 52px;
+  background: url('./images/theme/icon-youtube.svg') no-repeat;
+  cursor: pointer;
+}
+
+.zoom-container {
+  overflow: hidden;
+  
+}
+
+.zoom-element {
+  background-color: #3490dc; /* Replace with your desired background color */
+  width: 200px; /* Replace with your desired width */
+  height: 200px; /* Replace with your desired height */
+  transition: transform 0.4s ease-in-out;
+  cursor: pointer;
+
+  &:hover {
+    transform: scale(1.2); /* Adjust the scale factor for desired zoom out effect */
+  }
+}
+
+.wrap {
+  @apply mobile:py-[30px] laptop:py-[40px];
+}

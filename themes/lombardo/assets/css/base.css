@@ -1,0 +1,94 @@
+
+
+.link-more {
+  @apply text-white ;
+
+  span {
+    @apply text-white;
+  }
+}
+
+.mobile-menu {
+  background-color: #002644 !important;
+
+  .navbar-nav {
+    li {
+      border-color: #fff;
+      &.active {
+        >a {
+          color: #C3251D;
+        }
+
+      }
+    }
+  }
+
+  .nav-link {
+    color: #fff;
+    text-align: left;
+    font-family: Barlow;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 100%;
+    /* 16px */
+    text-transform: uppercase;
+
+    &.active,
+    &:active,
+    &:focus {
+      color: #ffff;
+    }
+  }
+
+  .dropdown-menu {
+    background-color: transparent;
+
+    .menu-item {
+      white-space: wrap !important;
+
+      &.active a {
+        color: #C3251D;
+      }
+
+      a {
+        color: #fff;
+        text-align: left;
+        font-family: Barlow;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 150%;
+        white-space: normal !important;
+        /* 16px */
+        text-transform: uppercase;
+
+        &:focus,
+        &:focus-visible,
+        &:active,
+        &:target,
+        &:visited {
+          outline: none !important;
+          background: transparent !important;
+        }
+
+        &:active {
+          background-color: #fff;
+        }
+      }
+    }
+  }
+
+
+}
+
+.remove_scroll {
+  .opener {
+    svg {
+      color: #C3251D !important;
+    }
+  }
+}
+
+
+

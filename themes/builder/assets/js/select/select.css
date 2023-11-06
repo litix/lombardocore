@@ -1,0 +1,81 @@
+.dcustom-select { border: 1px solid #394a6d; }
+.custom-select__trigger { 
+     font-size: 15px; font-weight: 300; color: #3b3b3b; 
+     background: #ffffff; border: 1px solid #394a6d; 
+}
+.custom-options { 
+    border: 2px solid #394a6d;
+    background: #fff;
+}
+.custom-option { 
+    font-size: 15px;
+    font-weight: 300;
+    color: #3b3b3b;
+    line-height: 40px;
+}
+.custom-option:hover { background-color: #b2b2b2; }
+.custom-option.selected {
+    color: #ffffff;
+    background-color: rgba(0,0,0,0.2);
+}
+
+/* generic */
+.custom-select-wrapper { 
+    position: relative; user-select: none; width: 100%;  
+}
+.dcustom-select {
+    position: relative; display: flex; flex-direction: column; 
+}
+.custom-select__trigger {
+    position: relative; display: flex; align-items: center; justify-content: space-between;
+    padding: 0 22px;  cursor: pointer; height: 60px; line-height: 60px;
+}
+.custom-options {
+    position: absolute;
+    display: block;
+    top: 100%;
+    left: 0;
+    right: 0;
+    border-top: 0;
+    transition: all 0.5s;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    z-index: 2;
+}
+.dcustom-select.open .custom-options {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: all;
+}
+.custom-option {
+    position: relative;
+    display: block;
+    padding: 0 22px 0 22px;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+.custom-option:hover { cursor: pointer; }
+.custom-option.selected { }
+
+.dcustom-select .arrow { position: relative; height: 15px; width: 15px;  }
+.dcustom-select .arrow::before, .arrow::after {
+    content: "";
+    position: absolute;
+    bottom: 0px;
+    width: 0.15rem;
+    height: 100%;
+    transition: all 0.5s;
+}
+.dcustom-select .arrow::before {
+    left: -5px; transform: rotate(-45deg); background-color: #394a6d;
+}
+.dcustom-select .arrow::after {
+    left: 5px; transform: rotate(45deg); background-color: #394a6d;
+}
+.dcustom-select.open .arrow::before {
+    left: -5px; transform: rotate(45deg);
+}
+.dcustom-select.open .arrow::after {
+    left: 5px; transform: rotate(-45deg);
+}

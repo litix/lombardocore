@@ -1,0 +1,461 @@
+jQuery(document).ready(function($){
+//STICKY HEADER
+  var $window = $(window);
+  $window.scroll(function() {
+	$scroll_position = $window.scrollTop();
+	  if ($scroll_position > 1) { 
+		  $('.header-sticky').addClass('is-sticky');
+		  header_height = $('.header-sticky').innerHeight();
+		  $('body').css('padding-top' , header_height);
+		  $('.announcement_container').slideUp(300);
+	  	  $('.header_divider').css('position', 'absolute');
+	  } else {
+		  $('body').css('padding-top' , '0');
+		  $('.header-sticky').removeClass('is-sticky');
+		  $('.announcement_container').slideDown(300);
+		  $('.header_divider').css('position', 'relative');
+	  }
+  });
+
+
+
+  var $wpAdminBar = $('#wpadminbar');
+  if ($wpAdminBar.length) {
+	  $('.header-sticky').css('top', '32px');
+  } else {
+	  $('.header-sticky').css('top', '0px');
+  }
+
+ $('.menu-main-menu-container').fadeIn(100);
+
+// ADD SEARCH BAR TO MM MENU
+	$('.search-box').clone().appendTo('.mm-navbars_top').addClass('search-top-fix');
+
+//TOGGLE ANNOUNCEMENT
+	$('.close_btn').click(function(){
+		$('.announcement_container').slideUp(300).addClass('remove_completely');
+		
+	});
+
+
+//TOGGLE SEARCH BAR
+	$('#menu-item-293').click(function(){
+		$('#menu-item-293 .sub-menu').show(100);
+		return false; 
+	});
+	
+	$('#menu-item-293').mouseenter(function(){
+		$('#menu-item-293 .sub-menu').css('display', 'none');
+	});
+	
+	$('#menu-item-293 .sub-menu').click(function(e){
+		e.stopPropagation();
+	});
+	
+	$('#menu-item-293 .sub-menu').mouseenter(function(e){
+		e.stopPropagation();
+	});
+	
+	$(window).click(function(){
+		$('#menu-item-293 .sub-menu').css('display', 'none');
+	});
+
+
+//STOP VIDEO IF MODAL IS CLOSED	
+	$(".modal").on('hidden.bs.modal', function (e) {
+    	$(".modal iframe").attr("src", $(".modal iframe").attr("src"));
+	});
+
+// ANIMATE ON VIEWPORT
+    var $animation_elements = $('.reveal');
+    var $window = $(window);
+
+    function check_if_in_view() {
+      var window_height = $window.height();
+      var window_top_position = $window.scrollTop();
+      var window_bottom_position = (window_top_position + window_height);
+
+      $.each($animation_elements, function() {
+         var $element = $(this);
+         var element_height = $element.outerHeight();
+         var element_top_position = $element.offset().top;
+         var element_bottom_position = (element_top_position + element_height);
+		 
+		 if ((element_bottom_position >= window_top_position) && (element_top_position <= window_bottom_position)) {
+			$element.addClass('animate');
+		 } else {
+			$element.removeClass('animate');
+	     }
+       });
+    }
+    $window.on('scroll resize', check_if_in_view);
+    $window.trigger('scroll');
+
+//SMOOTH SCROLLING ANCHOR TAB
+ $('.page_banner_btn li a').click(function() 
+  {
+    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') 
+        || location.hostname == this.hostname) 
+    {
+      
+      var target = $(this.hash),
+      headerHeight = $(".header-sticky").height() + 200; // Get fixed header height
+            
+      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+              
+      if (target.length) 
+      {
+        $('html,body').animate({
+          scrollTop: target.offset().top - headerHeight
+        }, 500);
+        return false;
+      }
+    }
+  });
+
+//ACCORDION
+//	$('#accordion_1').addClass('accordion_active');
+//	$('.accordion_question_1').addClass('question_active');
+//	$('accordion_answer_1').addClass('answer_active');
+//	$('#accordion_answer_1').slideToggle(300);
+//	$('#accordion_btn_1').text("-");
+//	$('.icon_container_1').addClass('button_active');
+
+	$('.accordion_question_container').click(function(){
+		var that = $(this);
+		
+		$('.accordion').removeClass('accordion_active');
+		$('.accordion_question').removeClass('question_active');
+		$('.accordion_answer_container').removeClass('answer_active');
+		$('.accordion-button-icon').text("+");
+		$('.icon_container').removeClass('button_active');
+		$('.accordion_answer_container').slideUp(300);
+		
+		if( that.next().hasClass('answer_active') ){
+			that.parent().removeClass('accordion_active');
+			that.next().removeClass('answer_active');
+			that.removeClass('question_active');
+			that.find('.accordion-button-icon').text("+");
+			that.find('.icon_container').removeClass('button_active');
+			that.next().slideUp(300);
+		} else {
+			that.parent().addClass('accordion_active');
+			that.next().addClass('answer_active');
+			that.addClass('question_active');
+			that.find('.accordion-button-icon').text("-");
+			that.find('.icon_container').addClass('button_active');
+			that.next().slideToggle(300);
+		}
+	});
+
+	
+//SVG CONVERSION
+	$(function(){
+		jQuery('img.ubermenu-image').each(function(){
+			var $img = jQuery(this);
+			var imgID = $img.attr('id');
+			var imgClass = $img.attr('class');
+			var imgURL = $img.attr('src');
+		
+			jQuery.get(imgURL, function(data) {
+				// Get the SVG tag, ignore the rest
+				var $svg = jQuery(data).find('svg');
+		
+				// Add replaced image's ID to the new SVG
+				if(typeof imgID !== 'undefined') {
+					$svg = $svg.attr('id', imgID);
+				}
+				// Add replaced image's classes to the new SVG
+				if(typeof imgClass !== 'undefined') {
+					$svg = $svg.attr('class', imgClass+' replaced-svg');
+				}
+		
+				// Remove any invalid XML tags as per http://validator.w3.org
+				$svg = $svg.removeAttr('xmlns:a');
+				
+				// Check if the viewport is set, else we gonna set it if we can.
+				if(!$svg.attr('viewBox') && $svg.attr('height') && $svg.attr('width')) {
+					$svg.attr('viewBox', '0 0 ' + $svg.attr('height') + ' ' + $svg.attr('width'))
+				}
+		
+				// Replace image with new SVG
+				$img.replaceWith($svg);
+		
+			}, 'xml');
+		
+		});
+	});	
+
+//JQUERY READMORE
+	var $viewctr = 1;
+
+	$('.viewmore').each(function(){
+		var $viewmore = '.viewmore_options' + $viewctr + ' ul li';
+
+		$($viewmore).hide();
+		$($viewmore + ':lt(5)').show();
+		$('.concept_btn' + $viewctr).click(function () {
+		$($viewmore + ':not(:visible):lt(5)').show();
+			if ($($viewmore + ':not(:visible)').length == 0)
+				$(this).hide();
+				return false;   
+		});
+	$viewctr++;
+	})
+	
+	var $kmenu = 1;
+	$('.knowledgebase_menu').each(function(){
+		var $showmore = '#knowledgebase_menu' + $kmenu;
+		var $n = $($showmore + ' li').length;
+
+		if( $n <= 3 ) {
+			$($showmore).find('.kmenu').css('display', 'none');
+		}
+		
+		$($showmore + ' li').hide();
+		$($showmore + ' li:lt(3)').show();
+		$('#kmenu' + $kmenu).click(function () {
+			$($showmore + ' li:not(:visible):lt(5)').show();
+			
+			if ($($showmore + ' li:not(:visible)').length == 0)
+				$(this).hide();
+				return false;   
+		});
+	$kmenu++;
+	});
+
+//LOAD MORE POST
+  $(document).on('click', '.post-load-more', function(){
+	  var that = $(this);
+	  var page = that.data('page');
+	  var newPage = page+1;
+	  var ajaxurl = that.data('url');
+
+	  $.ajax({
+		 url : ajaxurl,
+		 type : 'post',
+		 data : {
+		   page : page,
+		   action : 'post_load_more',
+
+		 },
+		 error : function( response ){
+		   console.log(response);
+		 },
+		 success : function( response ){
+		   if( response == 0 ){
+			   $('.more_post').append( '<div class="load_message" style="text-align: center;">No more posts to load</div>' );
+			   $('.load_more_button').hide();
+		   } else {
+			   that.data('page', newPage);
+			   $('.more_post').append( response );
+		   }
+		 }
+	  });
+  });
+
+//TESTIMONIAL MORE POST
+  $(document).on('click', '.tpage_load_more', function(){
+	  var that = $(this);
+	  var page = that.data('page');
+	  var newPage = page+1;
+	  var ajaxurl = that.data('url');
+
+	  $.ajax({
+		 url : ajaxurl,
+		 type : 'post',
+		 data : {
+		   page : page,
+		   action : 'testimonial_load_more',
+
+		 },
+		 error : function( response ){
+		   console.log(response);
+		 },
+		 success : function( response ){
+		   if( response == 0 ){
+			 //  $('.more_post').append( '<div class="load_message" style="text-align: center;">No more posts to load</div>' );
+			   $('.load_more_btn').hide();
+		   } else {
+			   that.data('page', newPage);
+			   $('.tpage_container').append( response );
+		   }
+		 }
+	  });
+  });
+
+//TESTIMONIAL MORE POST
+  $(document).on('click', '.news-load-more', function(){
+	  var that = $(this);
+	  var page = that.data('page');
+	  var newPage = page+1;
+	  var ajaxurl = that.data('url');
+
+	  $.ajax({
+		 url : ajaxurl,
+		 type : 'post',
+		 data : {
+		   page : page,
+		   action : 'news_load_more',
+
+		 },
+		 error : function( response ){
+		   console.log(response);
+		 },
+		 success : function( response ){
+		   if( response == 0 ){
+			 //  $('.more_post').append( '<div class="load_message" style="text-align: center;">No more posts to load</div>' );
+			   $('.news_load_more_button').hide();
+		   } else {
+			   that.data('page', newPage);
+			   $('.news_more').append( response );
+		   }
+		 }
+	  });
+  });
+
+//COUNTER	
+	/*jQuery(document).ready(function ($) {
+     	$('.counters').counterUp({
+        	delay: 200,
+            time: 3000
+        });
+    });*/
+	
+	$('.judgement_value_btn .gform_footer').after('<div style="clear: both;"></div>');
+
+//REQUEST TRIAL LIST
+	var rtt_height = $('.rtt_list').height();
+	$('.rtt_list_line').css('height', rtt_height);
+
+
+// RESTARTING GIF ON VIEWPORT
+ /*   var $animation_elements1 = $('.home_row_3');
+    var $window1 = $(window);
+
+    function check_if_in_view1() {
+      var window_height1 = $window.height();
+      var window_top_position1 = $window.scrollTop();
+      var window_bottom_position1 = (window_top_position1 + window_height1);
+
+      $.each($animation_elements1, function() {
+         var $element1 = $(this);
+         var element_height1 = $element1.outerHeight();
+         var element_top_position1 = $element1.offset().top;
+         var element_bottom_position1 = (element_top_position1 + element_height1);
+		 var $screen = $('.wp-image-1188').attr('src');;
+		  
+		 if ((element_bottom_position1 >= window_top_position1) && (element_top_position1 <= window_bottom_position1)) {
+			 $('.wp-image-1188').attr('src', '');
+			 $('.wp-image-1188').attr('src', $screen);
+			 return false;
+		 } 
+       });
+    }
+    $window.on('scroll resize', check_if_in_view1);
+    $window.trigger('scroll');*/
+
+//CUSTOMER INTERACTION RETAIL 
+	$('.cir_container .cir_col:first').addClass('cir_active');
+	$('.cir_info_body .cir_body_contents:first').addClass('cir_info_active');
+	
+	$('.cir_col').mouseover(function(){
+		var x = '#'+$(this).data('target');
+		$('.cir_col').removeClass('cir_active');
+		$(this).addClass('cir_active');
+		$('.cir_body_contents').removeClass('cir_info_active');
+		$(x).addClass('cir_info_active');
+		return false;
+	});
+
+// Shuffle Tabs
+
+    var containerEl = document.querySelector(".shuffle-wrapper");
+    if (containerEl) {
+        var Shuffle = window.Shuffle;
+        var myShuffle = new Shuffle(document.querySelector(".shuffle-wrapper"), { itemSelector: ".shuffle-item", buffer: 1 });
+        $('input[name="shuffle-filter"]').on("change", function (evt) {
+            var input = evt.currentTarget;
+            if (input.checked) {
+                myShuffle.filter(input.value);
+            }
+        });
+    }   
+	
+	$('.team_row_1 .page_col_2').each(function(){
+		var teamImage = $(this).find('.mt_portrait_social img').data('src');
+		
+		$(this).find('.mt_portrait_social').css('background-image', 'url('+ teamImage +')');
+	});
+
+//MANAGEMENT AND BOD SCRIPTS
+	$('#menutitle_management').addClass('menutitle_active');
+	$('#mtab_management').css('display', 'block');
+	
+	$('.mtab_menutitle').click(function(){
+		var $mtab_data = $(this).data('mtab'),
+			$mtab_title = '#' + $mtab_data + '_title',
+			$mtab_contents = '#' + $mtab_data;
+
+		$('.mtab_menutitle').removeClass('menutitle_active');
+		$(this).addClass('menutitle_active');
+		$('.mtab_title').fadeOut(0);
+		$($mtab_title).fadeIn(100);
+		$('.mbod_container').fadeOut(0);
+		$($mtab_contents).fadeIn(200);
+		$('.reveal').addClass('animate');
+	});
+	
+}); //document on load end
+
+
+
+/*
+jQuery(document).ready(function(){
+	jQuery('.tooltip').tipso({
+		position: 'right',
+		background: '#085B9B',
+		width : 405,
+		useTitle: false,
+		color : 'white'
+	});
+
+});
+*/
+
+Mobile Menu : No | Tracking Scripts : Yes
+https://developers.google.com/speed/pagespeed/insights/?url=https%3A%2F%2Fdevzineone.wpengine.com%2Fno-menu%2F
+- this is the mobile menu that the prev dev used (i suggest this one to be changed)
+- LCP improved (up to 5.1) (Score : 25-30)
+
+Mobile Menu : Yes | Tracking Scripts : No
+https://developers.google.com/speed/pagespeed/insights/?url=https%3A%2F%2Fdevzineone.wpengine.com%2Fno-3rd-scripts%2F
+- this result if the tracking scripts in the footer are removed, but Hubspot, formv2j, and hotjar is active
+- LCP improved (up to 7) (Score : 25-28)
+
+Everything Active : Yes
+https://developers.google.com/speed/pagespeed/insights/?url=https%3A%2F%2Fdevzineone.wpengine.com
+- LCP (up to 14) (Score : 19-20)
+
+Summary:
+I did applied Speed optimization with a small room of improvement.
+I did check the highest potential score of the site can get and it can reach a maximum of 30-40. 
+It can go up above(40) because of the Hubspot plugin, 3rd party scripts, and because of the theme scripts.
+Overall these are the culprits : Hubspot plugin, formv2j, mmenu (mobile menu), 3rd party tracking scripts.
+
+Improvements :
+- Try to cache 3rd party scripts (researching)
+- Identify other cause of LCP
+- minimize above the fold
+
+Reccomendations : (For Dev)
+- Replace the mobile menu (the mmenu.js script is eating too much resource).
+- Use svg icons instead of using fontawesome
+- Use conditional script loading :
+	if(is front page) { enqueue script }
+	
+
+
+
+
+

@@ -1,0 +1,107 @@
+header {  
+    padding-top: 11px;
+    background: #002644;
+
+    .menu-overlay {
+      background: transparent;
+    }
+    
+    @media (max-width:1024px) {
+      padding-top: 0;
+    }
+  
+    .menu-oc-right svg {
+      width: 40px;
+      height: 40px;
+    }
+  
+    .menu_wrap {
+      padding: 10px 0 15px;
+  
+      @media (max-width:1024px) {
+        background-color: #002644;
+      }
+  
+      .container-xl {
+        .navbar {
+          .logo-desktop {
+            .navbar-brand {
+              line-height: 1;
+              padding: 0;
+              margin-right: 0;
+              width: 194px;
+            }
+          }
+  
+          .main-menu {
+            width: 100%;
+            margin-top: 15px;
+  
+            .navbar-nav {
+              display: flex;
+              justify-content: flex-end;
+              gap: 29px;
+
+              li {
+                padding: 0 0 10px;
+                margin: 0 0 0;
+                
+  
+                &:hover,&.active {
+                  border-bottom: 2px solid #FFF;
+                }
+
+                a {
+                  padding: 0;
+                  margin: 0;
+                  color: #FFF;
+                  text-align: center;
+                  font-family: Barlow;
+                  font-size: 16px;
+                  font-style: normal;
+                  font-weight: 500;
+                  line-height: normal;
+                  text-transform: uppercase;
+                }
+  
+                &.dropdown {
+                  .dropdown-menu {
+                    padding-top: 5px;
+                    border-radius: 0;
+                    background-color: #0059A0;
+                    border: transparent;
+  
+                    li {
+                      a {
+                        color: #fff;
+                        padding: 10px;
+                      }
+  
+                      &.active,
+                      &:hover {
+                        a {
+                          color: #C3251D;
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+  
+        .menu-extension {
+          margin-left: 29px;
+          margin-top: 0;
+          .btn-1 {
+            padding: 15px 20px;
+          }
+        }
+      }
+    }
+  
+    &.sticky-head {
+      background: #002644;
+    }
+  }

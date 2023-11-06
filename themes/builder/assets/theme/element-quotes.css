@@ -1,0 +1,91 @@
+[data-design*="quotes-1"] .item {
+    padding: 20px;
+    border: 1px solid rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 5px;
+}
+
+[data-design*="quotes-1"] .item { 
+    background-image: url('../../images/icons/quote-1.svg');
+    background-repeat: no-repeat;
+    background-position: 22px 10px;
+    background-size: 32px;
+    height: 100%;
+}
+
+[data-design*="quotes-1"] hr {
+    width: 25%;
+}
+
+[data-design*="quotes-1"] .flexic {
+    gap: 20px;
+    align-items: center;
+}
+[data-design*="quotes-1"] .btitle {
+    margin-bottom: 0;
+}
+
+[data-design*="quotes-1"] .btitle,
+[data-design*="quotes-2"] .btitle {
+    letter-spacing: 0;
+    text-transform: capitalize;
+}
+
+[data-design*="quotes-2"] .btitle {
+    margin-bottom: 0;
+}
+
+[data-design*="quotes-1"] .davatar {
+    flex: 0 0 70px;
+    height: 70px;
+}
+
+[data-design*="quotes-1"] .meta {
+    line-height: 100%;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+}
+
+[data-design*="quotes-1"] .meta .ititle {
+    margin-bottom: 10px;
+    line-height: 1;
+}
+
+[data-design*="quotes-1"] .dtext,
+[data-design*="quotes-1"] .ptext {
+    text-indent: 50px;
+    line-height: 155%;
+}
+
+/* QUOTES 2 */
+
+[data-design*="quotes-2"] .ititle {
+    margin-bottom: 5px;
+}
+
+[data-design*="quotes-2"] .dtext,
+[data-design*="quotes-2"] .ptext { 
+    font-size: 24px;
+    text-align: center;
+    position: relative;
+}
+
+[data-design*="quotes-2"] .meta {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    line-height: 1;
+    gap: 5px;
+}
+
+[data-design*="quotes-2"] .dflex-center {
+    gap: 20px;
+    margin-top: 30px;
+}
+
+[data-unshow*="av"][data-design*="quotes-2"] .meta {
+    text-align: center;
+}

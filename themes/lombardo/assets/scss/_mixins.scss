@@ -1,0 +1,190 @@
+@use './variables.scss' as *;
+@use './animate.scss' as *;
+
+/*Basic Mixins*/
+
+@mixin absolute() {
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    content: "";
+}
+
+@mixin outline($color : red) {
+    //outline: 1px solid $color;
+    outline: 1px solid transparent;
+}
+
+@mixin wrap($padding: 80px 0) {
+    padding: $padding;
+
+    @media (max-width:1024px) {
+        padding: 30px 0;
+    }
+}
+
+
+//Typography
+@mixin heading {
+    color: #0059A0;
+    font-family: $primary-font;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 120%;
+    letter-spacing: 3.2px;
+    text-transform: uppercase;
+}
+
+@mixin title {
+    color: #002644;
+    font-family: $primary-font;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 120%;
+}
+
+@mixin description {
+    color: #777;
+    font-family: $secondary-font;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+}
+
+/*Old Version*/
+
+@mixin media-flex {
+    @media (max-width:600px) {
+        flex-direction: column;
+
+        .item {
+            flex: 1 100%;
+        }
+    }
+}
+
+@mixin media-padding {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    text-align: center;
+}
+
+@mixin media-container($padding-top: 90px, $padding-bottom: 80px) {
+    padding-top: $padding-top;
+    padding-bottom: $padding-bottom;
+
+    @media (max-width:767px) {
+        text-align: center;
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+}
+
+@mixin svg-transition($color: $white) {
+    @include transition;
+
+    &:hover {
+        background-color: $color;
+        filter: invert(100%);
+    }
+}
+
+@mixin svg-transition-hover($color: $white) {
+    @include transition;
+    color: $color;
+    filter: invert(100%);
+}
+
+// @mixin wrap () {
+//     padding: 80px 0;
+
+//     @media (max-width:844px) {
+//         padding: 30px;
+//     }
+// }
+
+
+
+//Buttons
+@mixin btn-basic {
+    font-family: $primary-font;
+    color: $color3;
+    border: 1px solid $color3;
+    font-size: 15px;
+    font-weight: 500;
+    padding: 8px 16px;
+    background-color: transparent;
+    transition: all 300ms ease-in;
+
+    &:hover {
+        background-color: $color3;
+        color: $white;
+    }
+}
+
+//Background 
+@mixin mix-background-image($image) {
+    position: relative;
+    background: url($image) no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+}
+
+@mixin before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+@mixin transition {
+    transition: all 300ms ease;
+}
+
+/********************** Basic Animations **********************/
+//Text
+@mixin tracking-in-contract {
+    animation: tracking-in-contract 0.8s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+}
+
+
+//Basic
+@mixin flip-horizontal-bottom {
+    animation: flip-horizontal-bottom 0.4s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
+}
+
+/********************** Entrances **********************/
+
+@mixin animate-fade-in() {
+    -webkit-animation: fade-in 1.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+    animation: fade-in 1.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+}
+
+//Scale
+@mixin animate-scale-in-center($time: 0.6s) {
+    animation: scale-in-center $time cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+//Fades
+@mixin animate-fade-in-fwd($time: 0.6s) {
+    animation: fade-in-fwd $time cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+}
+
+/********************** Exits **********************/
+
+@mixin fade-out($time: 1s) {
+    animation: fade-out $time ease-out both;
+}
+
+@mixin scale-out-center {
+    animation: scale-out-center 0.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+}

@@ -1,0 +1,43 @@
+//Theme Name Wordpres
+@forward "./wordpress";
+
+//@forward "./dev";
+
+//Theme Defaults
+//@forward "./fonts";
+//@forward "./typography";
+//@forward "./buttons";
+//@forward "./common";
+
+//Components Load
+//@forward "../components/vertical-tabs/vertical-tabs";
+//@forward "./components/slick";
+
+//Resets
+//@forward "./resets/gravity";
+
+//Base and Partials CSS 
+//@forward "./partials/header";
+//@forward "./partials/footer";
+
+//@forward "./partials/cta";
+
+//Pages
+//@forward "./pages/single";
+
+//Layouts
+//@forward "./layouts/01_banner";
+// @forward "./layouts/01_image_grid";
+// @forward "./layouts/01_image_carousel";
+
+
+//@forward "./layouts/02_content_image";
+//@forward "./layouts/02_image_section";
+
+//@forward "./form";
+
+//Partials
+//@forward "./partial-contact";
+
+//Pages and Post
+//@forward "./0_single-posts"

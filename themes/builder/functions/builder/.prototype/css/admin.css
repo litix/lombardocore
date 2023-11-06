@@ -1,0 +1,57 @@
+/*
+    ADMIN CUSTOM
+    ACF VERSION : 6+
+*/
+
+/* Fields */
+.acf-field-settings-tab-bar li {
+    order: 0;
+}
+.acf-field-settings-tab-bar .acf-settings-type-validation {
+    order: 4;
+}
+
+.acf-field-settings-main-general {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 72px;
+    gap: 20px;
+}
+
+.acf-field-settings-main-general .acf-field[data-setting="group"],
+.acf-field-settings-main-general .acf-field[data-name="default_value"],
+.acf-field-settings-main-general .acf-field-type-settings[data-parent-tab="general"] .acf-field {
+    padding: 0;
+}
+
+.acf-field-settings-main-presentation,
+.acf-field-settings-main-validation {
+    margin: 0 72px;
+}
+
+.acf-field-settings-main-presentation .acf-field,
+.acf-field-settings-main-validation .acf-field {
+    padding: 0;
+}
+
+.acf-field-settings-main-general .acf-field-type-settings {
+    flex: 1;
+}
+
+.acf-field-settings-main-general .acf-field-setting-type,
+.acf-field-settings-main-general .acf-field-setting-label,
+.acf-field-settings-main-general .acf-field-setting-name {
+    flex: 0 0 calc(33% - 15px);
+    padding: 0;
+}
+
+.acf-field-settings .acf-field.acf-field-setting-label {
+    border: none;
+    padding-top: 0;
+}
+
+.post-type-acf-field-group .acf-field-setting-fc_layout {
+    margin-left: 0;
+    margin-right: 0;
+    width: 100%;
+}

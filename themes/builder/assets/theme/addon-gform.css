@@ -1,0 +1,203 @@
+/* GRAVITY FORMS */
+
+.gform {
+    width: 100%;
+}
+.gform .form-control:focus {
+    box-shadow: none;
+    background-color: cornsilk;
+}
+
+.gform .gform_wrapper.gravity-theme .gform_footer, 
+.gform .gform_wrapper.gravity-theme .gform_page_footer {
+    margin: 30px 0 0;
+    padding: 0px 0;
+}
+
+.gform .gform_wrapper.gravity-theme .gform_footer .btn { 
+    margin-bottom: 0; 
+}
+
+.gform .gform_wrapper.gravity-theme .gfield input[type="checkbox"],
+.gform .gform_wrapper.gravity-theme .gfield input[type="radio"] {
+    height: auto;
+}
+.gform .gform_wrapper.gravity-theme .gfield select,
+.gform .gform_wrapper.gravity-theme .gfield input {
+    height: 50px;
+}
+
+.gform .gform_wrapper.gravity-theme .gfield select,
+.gform .gform_wrapper.gravity-theme .gfield input,
+.gform .gform_wrapper.gravity-theme .gfield textarea {
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 0;
+}
+
+.gform .gform_wrapper.gravity-theme .gfield textarea.large { 
+    height: 150px;
+}
+
+.gform .gform_wrapper.gravity-theme .gfield textarea:focus-visible,
+.gform .gform_wrapper.gravity-theme .gfield input:focus-visible {
+    background-color: cornsilk;
+}
+
+.gform .gform_wrapper.gravity-theme .gfield textarea:focus-visible {
+    outline: none !important;
+    box-shadow: none;
+}
+
+.gform .gform_wrapper.gravity-theme .ginput_complex label,
+.gform .gform_wrapper.gravity-theme .gfield_label {
+    font-size: 12px;
+    font-weight: 300;
+    margin-bottom: 4px;
+    text-transform: uppercase;
+}    
+
+.gform .gform_wrapper.gravity-theme .gfield ::placeholder {
+    color: #aaa;
+}
+
+.gform .gform_wrapper.gravity-theme .ginput_complex {
+    row-gap: 16px;
+}
+
+
+/* CUSTOM SELECT ARROW */
+
+.gform .gform_wrapper.gravity-theme .gfield select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    text-indent: 1px;
+    text-overflow: '';
+}
+
+.gform .gform_wrapper.gravity-theme .gfield select {
+    background-image: url(../../images/icons/select-arrow.svg);
+    background-position: calc(100% - 10px) 54%;
+    background-repeat: no-repeat;
+}
+
+
+/* CUSTOM CHECKBOX */
+.gform .ginput_container_consent,
+.gform .ginput_container_radio .gchoice,
+.gform .ginput_container_checkbox .gchoice {
+    display: inline-block;
+    margin-bottom: 12px;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    margin-right: 15px;
+}
+
+.gform .ginput_container_consent label,
+.gform .ginput_container_radio .gchoice label,
+.gform .ginput_container_checkbox .gchoice label {
+    padding-left: 35px;
+    position: relative;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.gform .ginput_container_consent input,
+.gform .ginput_container_radio .gchoice input,
+.gform .ginput_container_checkbox .gchoice input {
+    opacity: 0;
+    height: 0;
+    width: 0;
+    overflow: hidden;
+    display: none;
+}
+
+.gform .ginput_container_consent label::after,
+.gform .ginput_container_radio .gchoice label::after,
+.gform .ginput_container_checkbox .gchoice label::after {
+    content: "";
+    position: absolute;
+    display: block;
+    height: 22px;
+    width: 22px;
+    left: 0;
+    top: 0;
+    background-color: #eee;
+}
+
+.gform .ginput_container_radio .gchoice label::after {
+    border-radius: 50%;
+}
+
+.gform .ginput_container_consent label:hover::after,
+.gform .ginput_container_radio .gchoice:hover label:hover::after,
+.gform .ginput_container_checkbox .gchoice:hover label:hover::after {
+    background-color: #ccc;
+}
+
+.gform .ginput_container_consent input:checked ~ label::after,
+.gform .ginput_container_radio .gchoice input:checked ~ label::after,
+.gform .ginput_container_checkbox .gchoice input:checked ~ label::after {
+    background-color: #2196F3;
+}
+
+.gform .ginput_container_consent label::before,
+.gform .ginput_container_radio .gchoice label::before,
+.gform .ginput_container_checkbox .gchoice label::before {
+    content: "";
+    position: absolute;
+    display: none;
+    z-index: 1;
+}
+
+.gform .ginput_container_consent input:checked ~ label::before,
+.gform .ginput_container_radio .gchoice input:checked ~ label::before,
+.gform .ginput_container_checkbox .gchoice input:checked ~ label::before {
+    display: block;
+}
+
+.gform .ginput_container_consent label::before,
+.gform .ginput_container_checkbox .gchoice label::before { 
+    left: 8px;
+    top: 4px;
+    width: 6px;
+    height: 12px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);    
+}
+
+.gform .ginput_container_radio .gchoice label::before {
+    top: 6px;
+    left: 6px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: white;    
+}
+
+.gform .gform_ajax_spinner { max-width: 20px; }
+
+/* VALIDDATION */
+.gform .gform_wrapper.gravity-theme .gform_validation_errors {
+    padding: 15px;
+}
+
+.gform .gform_wrapper.gravity-theme .gfield_validation_message, 
+.gform .gform_wrapper.gravity-theme .validation_message {
+    display: none;
+}
+
+.gform .gform_wrapper.gravity-theme .gfield.gfield_error select, 
+.gform .gform_wrapper.gravity-theme .gfield.gfield_error input, 
+.gform .gform_wrapper.gravity-theme .gfield.gfield_error textarea {
+    border: 1px solid red;
+    border-radius: .25rem;
+}
+
+.gform .gform_required_legend { display: none; }

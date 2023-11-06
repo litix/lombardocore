@@ -1,0 +1,53 @@
+/* Gravity Forms */
+.element input[type=color], .element input[type=date], .element input[type=datetime-local], .element input[type=datetime], .element input[type=email], .element input[type=month], .element input[type=number], .element input[type=password], .element input[type=search], .element input[type=tel], .element input[type=text], .element input[type=time], .element input[type=url], .element input[type=week], .element select, .element textarea {
+    @apply border w-full bg-white  py-[11px] px-[35.91px]
+    text-[#7777] text-[18px] leading-[120%] font-inter
+    placeholder:!text-[#777] placeholder:!text-[18px] placeholder:leading-[120%] placeholder:font-inter
+    aria-[required=false]:border-red-500 aria-[invalid=true]:border-red-500;
+    ;
+  }
+  
+  .hidden_label .gfield_label {
+      @apply hidden;
+  }
+  
+  .gform_body {
+    @apply w-full;
+  }
+
+  .gform_fields {
+    @apply grid grid-cols-2  gap-[24.54px];
+  }
+
+  .gfield--width-half {
+    @apply col-span-1 mobile:col-span-2;
+  }
+  
+  .gfield--type-textarea {
+    @apply col-span-2;
+  }
+  
+  .gform_footer {
+    @apply flex justify-center mt-[32px];
+  }
+
+  .gform_confirmation_message {
+    @apply text-[#7777] text-[18px] leading-[120%] font-inter;
+  }
+
+  .gfield_validation_message, .gform_submission_error {
+    @apply hidden;
+  }
+
+  .gform_button {
+    @apply !border-[1px] !border-[transparent] !border-[#ccc] !rounded-none px-[25px] py-[20px] !bg-transparent !text-[#0090CC] text-base font-inter uppercase  font-[500] m-0 grow-0  inline-flex  justify-start items-start gap-2.5
+    after:!bg-[#0090CC] hover:!bg-[#FFF] hover:!text-[#0090CC] hover:after:!bg-[transparent] focus:ring-blue-400 focus:ring-opacity-75  !transition-all !ease-in !duration-300;
+  }
+  
+  
+  /* #gform_wrapper_2 */
+  #gform_wrapper_2 .gform_footer {
+    @apply justify-start;
+  }
+  
+

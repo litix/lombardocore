@@ -1,0 +1,171 @@
+/* #region - ERROR PLUGIN --------------------- */
+
+body.plugin-error main {
+    display: none;
+}
+
+.plugin-error {
+    padding-top: 100px;
+    align-items: center;
+}
+
+.plugin-error .mx-auto {
+    max-width: 500px;
+}
+
+.plugin-info {
+    max-width: 700px;
+}
+
+.plugin-error footer {
+    display: none;
+}
+
+.plugin-error .xdebug-error {
+    display: none;
+}
+
+.plugin-error .hide-me {
+    display: block !important;
+}
+
+.error-plugin {
+    font-family: 'Raleway';
+}
+.error-plugin h3 { 
+    margin-bottom: 0;
+}
+.error-plugin .card-body li {
+    margin-bottom: 10px;
+}
+.error-plugin .card-body li:last-child {
+    margin-bottom: 0;
+}
+
+/* #endregion */
+
+/* #region - 404 --------------------- */
+
+.el-error .row { 
+    align-items: center; 
+}
+.el-error h3 {
+    margin-bottom: 0;
+}
+.el-error .text { font-size: 2em; font-weight: 300; line-height: 120%; }
+.el-error .wrap { padding: 70px 0; }
+.el-error .btn-1, .el-error .btn-d {  font-size: 15px; border:none; padding: 10px 20px; }
+.el-error .mycenter, .el-error .text, .el-error .btn-d, .el-error .btn-1, .el-error .search { margin-bottom: 20px; }
+.el-error .pic-404 { max-width: 350px; margin: 0px auto 50px; }
+.el-error .pic-404 img { width: 100%; }
+.el-error .info-404 .search { max-width: 400px; margin: 40px auto;  }
+
+/* #endregion */
+
+/* #region - Noob --------------------- */
+.home.blog .header[data-sticky="sticky-fixed"] {
+    position: sticky;
+    top: 32px;
+}
+/* #endregion */
+
+/* #region - Instruction (Before Setup) --------------------- */
+.noob {
+    font-family: 'Raleway';
+}
+.noob .ctext {
+    font-size: 15px;
+    line-height: 170%;
+}
+.noob .dtop {
+    text-align: center;
+    padding: 40px 0;
+}
+.noob .title {
+    font-weight: 800;
+    margin-bottom: 0;
+}
+.noob .deck {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-bottom: 60px;
+}
+.noob .deck .card {
+    flex: 1 1 calc(33% - 10px);
+    max-width: calc(33% - 10px);
+}
+.noob ol,
+.noob ul {
+    margin-left: 1rem;
+    padding-left: 0;
+}
+.noob li:last-child {
+    margin-bottom: 0px;
+}
+.noob li {
+    margin-bottom: 10px;
+    padding-left: 5px;
+    font-size: 15px;
+}
+.noob .card-body ol {
+    margin-bottom: 0;
+}
+.noob .card-body ol ::marker {
+    margin-right: 10px;
+}
+.noob .card-header h5 {
+    margin-bottom: 0;
+    position: relative;
+}
+.noob .card-header small {
+    font-size: 13px;
+}
+.noob .btn {
+    background-color: #ccc;
+    padding: 5px 10px;
+    font-size: 90%;
+}
+.noob u {
+    text-decoration: none;
+    display: inline-block;
+    position: relative;
+}
+.noob u::after {
+    position: absolute;
+    content: "";
+    display: block;
+    width: 100%;
+    border-bottom: 1px dotted cornflowerblue;
+}
+
+.noob .btn-bb {
+    background-color: #444;
+    font-size: 12px;
+    font-weight: 400;
+    color: white;
+    text-transform: uppercase;
+    border: 1px solid transparent;
+}
+.noob .btn-bb:hover {
+    border: 1px solid #444;
+    color: #444;
+    background-color: white;
+}
+
+.noob .btn-gg {
+    background-color: lightgoldenrodyellow;
+    font-size: 12px;
+    font-weight: 400;
+    color: #444;
+    text-transform: uppercase;
+    border: 1px solid #444;
+}
+
+.noob .btn-gg:hover {
+    border: 1px solid transparent;
+    color: white;
+    background-color: green;
+}
+
+/* #endregion */

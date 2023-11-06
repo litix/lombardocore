@@ -1,0 +1,48 @@
+/*
+    ## LINK template-parts/_template/main-menu-1.php
+*/
+
+/* #region - MENU-1 */ 
+
+.top_head {
+    background-color: var(--color2);
+}
+
+.top_head .flexic {
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    font-size: 14px;
+}
+
+.top_head .social-icons {
+    gap: 15px;
+}
+
+.top_head .social-icons .soc-link img {
+    max-height: 16px;
+    max-width: 17px;
+    filter: brightness(0) invert(1);
+}
+
+.top_head .flexic,
+.top_head .flexic a {
+    color: var(--color1);
+    text-decoration: none;
+}
+
+.top_head .flexic .company-phone {
+    word-spacing: 0.3em;
+    letter-spacing: 0.05em;
+}
+
+.top_head .flexic .company-phone a {
+    padding: 0;
+    margin-left: 10px;
+}
+
+.top_head .flexic .company-phone a:hover {
+    color: white;
+}
+
+/* #endregion */

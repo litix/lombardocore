@@ -1,0 +1,63 @@
+/*
+    ## LINK template-parts/.template/footer-1.php
+*/
+
+/* #region - FOOTER */ 
+
+footer.element {
+    background-color: var(--color2);
+}
+
+footer.element .wrap {
+    padding: 60px 0;
+    position: relative;
+    overflow: hidden;
+}
+
+footer .copyright {
+    border-top: 1px solid rgba(150, 150, 150, 0.2);
+}
+
+footer .foot {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+/* default */
+
+.social-icons .soc-link {
+    background-color: #ccc;
+    border-radius: 100%;
+    width: 40px;
+    height: 40px;
+}
+
+.social-icons .soc-link img {
+    filter: brightness(0);
+    opacity: 0.7;
+    transition: 0.5s;
+}
+
+.social-icons a:hover img {
+    filter: grayscale(0);
+    opacity: 1;
+}
+
+/* #endregion */
+
+/* #region - FOOTER LINKS */
+
+footer .menu-item img { 
+    display: none; 
+}
+
+footer .nav-link { 
+    padding: 0; 
+}    
+
+footer .nav-link::after {
+    display: none;
+}
+
+/* #endregion */

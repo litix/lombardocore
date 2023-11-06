@@ -1,0 +1,177 @@
+@use "./mixins" as *;
+@use "./variables.scss" as *;
+.contact-page {    
+    position: relative;
+    margin-bottom: 0;
+    
+    
+    .banner-container {
+        background-color: #F7FAFD;
+        height: 810px;
+        width: 100%;
+        padding:0;
+        margin: 0;
+
+        .title-box {
+            padding: 60px 0 59px;
+            position: relative;
+            z-index: 2;
+            display: flex;
+            justify-content: center;
+        }
+        
+        .banner {
+            background-position: center;
+            background-size: cover;
+            max-width: 1170px;
+            width: 100%;
+            height: 576px;
+            margin: 0 auto;
+            padding: 0;
+            position: relative;
+
+            &:before {
+                display: none;
+            }
+        }
+    }
+    
+
+    .contact-template {
+        position: relative;
+        margin-top: 90px;
+
+        .top {
+            display: flex;
+            gap: 100px;
+            
+            @media (max-width:1024px) {
+                flex-wrap: wrap;
+                justify-content: center;
+                align-items: center;    
+            }
+
+            .info {
+                max-width: 370px;
+                
+                &.form {
+                    max-width: 700px;
+                    width: 100%;
+                }
+
+                .title {
+                    position: relative;
+                    width: 100%;
+                    font-family: 'Poppins';
+                    font-style: normal;
+                    font-weight: 500;
+                    font-size: 27px;
+                    line-height: 120%;
+                    letter-spacing: -0.03em;
+                    color: #3F3F3F;
+
+                    &.bordered {
+                        margin: 0;
+                        padding-bottom: 30px;
+                        
+                        &::before {
+                            @include after;
+                            top: initial;
+                            bottom: 2px;
+                            left: 0;
+                            width: 100%;
+                            height: 1px;
+                            background: #F17900;
+                        }
+
+                        &::after {
+                            @include after;
+                            top: initial;
+                            bottom: 0;
+                            left: 0;
+                            width: 60px;
+                            height: 5px;
+                            background: #F17900;
+                        }
+                    }
+                }
+
+                .headquarters {
+                    margin-top: 25px;
+                }
+
+                p {
+                    font-family: 'Poppins';
+                    font-style: normal;
+                    font-weight: 300;
+                    font-size: 18px;
+                    line-height: 140%;
+                    color: #505050;
+
+                    a {
+                        color: #527DA8;
+
+                        &:hover {
+                            color:#F17900;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.gform_wrapper.gravity-theme .gfield_label {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 300 !important;
+    font-size: 14px;
+    line-height: 140%;
+    color: rgba(80, 80, 80, 0.8);
+    }
+    
+  .gform_required_legend {
+    display: none;
+  }
+  
+    .form {
+      .gform_wrapper.gravity-theme .gfield input, .gform_wrapper.gravity-theme .gfield select {
+        padding:10px;
+        background: #FFFFFF;
+        border: 1px solid #CFCECE;
+        width: 100%;
+      }
+  
+      .gform_wrapper.gravity-theme .gfield textarea {
+        padding:10px;
+        background: #FFFFFF;
+        border: 1px solid #CFCECE;
+        width: 100%;
+        
+      }
+  
+      .btn-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        height: 100%;
+      }
+    }
+      
+    .gform_footer {
+      .gform_button {
+        background: #F17900;
+        border: 1px solid #F0B41B;
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 100%;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        text-transform: uppercase;
+        color: #FFFFFF;
+        padding:15px 25px;
+        }
+    }

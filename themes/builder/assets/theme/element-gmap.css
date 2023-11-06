@@ -1,0 +1,17 @@
+[data-design="gmap-01"] .overlay.color {
+    background-color: rgba(0,0,0,1);
+}
+
+[data-design="gmap-01"] .g-map {
+    opacity: 0.3;
+    right: 0;
+    width: 120%;
+    filter: grayscale(1);
+}
+
+[data-design="gmap-01"] .dinfo {
+    padding: 25px;
+    border-radius: 20px;
+    top: 55%;
+    transform: translateY(-45%);
+}

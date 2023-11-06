@@ -1,0 +1,32 @@
+.module-preview {
+    position: absolute;
+    right: 100%;
+    top: 0;
+    padding: 10px;
+    background-color: #2F353E;
+    z-index: 1;
+    border-radius: 5px;
+}
+.module-preview img {
+    width: 200px;
+    height: auto;
+}
+
+.acf-tooltip li:hover {
+    background-color:#0074A9;
+}
+
+.wp-core-ui #login h1 a {
+    margin: 0 0 10px;
+    width: 100%;
+    opacity: 0.5;
+    transition: 0.5s;
+    background-size: contain;
+    max-height: 80px;
+    height: auto;
+    min-height: 60px;
+}
+
+.wp-core-ui #login h1 a:hover {
+    opacity: 1;
+}

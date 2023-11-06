@@ -1,0 +1,79 @@
+#searchform-mobile .btn img { width: 15px; }
+
+.navbar .show-search {
+    background: #fff;
+    border-top: 3px solid #999;
+    box-shadow: 0 2px 7px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    z-index: 10000;
+    top: 100%;
+    right: 0;
+    padding: 15px;
+    display: none;
+}
+
+.ext-show-search input,
+.show-search input {
+    font-size: 13px;
+    font-weight: 300;
+    display: block;
+    padding: 10px 13px;
+    border-radius: 0;
+    border: 1px solid #e8e8e8;
+    background: #f4f4f4;
+    box-shadow: 0 5px 4px -4px rgba(190, 190, 190, 0.1);
+}
+
+.ext-show-search input { 
+    width: 100%; 
+}
+
+.ext-show-search form { 
+    position: relative; 
+}
+
+.ext-show-search .btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0;
+    padding: 10px;
+}
+
+.ext-show-search .btn::after {
+    display: none;
+}
+
+.ext-margin { 
+    margin-top: 2rem; 
+}
+
+.pop-search { 
+    position: relative; 
+}
+
+.pop-search .i-close { 
+    display: none; 
+}
+
+.pop-search .active .i-close { 
+    display: block; 
+}
+
+.pop-search .active .i-search {  
+    display: none; 
+}
+
+.pop-search button { 
+    color: #333; 
+    position: relative; 
+    top: -2px;
+    background-color: transparent; 
+    border: none;
+    padding: 0;
+}
+
+.pop-search svg { 
+    width: 14px; 
+    height: 14px; 
+}

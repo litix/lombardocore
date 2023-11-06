@@ -1,0 +1,217 @@
+@use "../mixins" as *;
+@use "../variables" as *;
+
+// header {
+  
+//   padding-top: 11px;
+
+//   @media (max-width:1024px) {
+//     padding-top: 0;
+//   }
+
+//   .menu-oc-right svg {
+//     width: 40px;
+//     height: 40px;
+//   }
+
+//   .menu_wrap {
+//     padding: 10px 0 15px;
+
+//     @media (max-width:1024px) {
+//       background-color: rgba(8, 34, 72, 1);
+//     }
+
+//     .container-xl {
+
+//       .navbar {
+//         .logo-desktop {
+          
+
+//           .navbar-brand {
+//             line-height: 1;
+//             padding: 0;
+//             margin-right: 0;
+//             width: 194px;
+//           }
+//         }
+
+//         .main-menu {
+//           width: 100%;
+//           margin-top: 15px;
+
+//           .navbar-nav {
+            
+//             display: flex;
+//             justify-content: flex-end;
+//             gap: 29px;
+
+//             li {
+              
+//               padding: 0 0 10px;
+//               margin: 0 0 0;
+//               border-bottom: 2px solid transparent;
+
+//               &:hover,
+//               &.active {
+//                 border-bottom: 2px solid #FFF;
+
+//                 a {}
+
+//               }
+
+
+
+//               a {
+                
+//                 padding: 0;
+//                 margin: 0;
+//                 color: #FFF;
+//                 text-align: center;
+//                 font-family: Barlow;
+//                 font-size: 16px;
+//                 font-style: normal;
+//                 font-weight: 500;
+//                 line-height: normal;
+//                 text-transform: uppercase;
+//               }
+
+//               &.dropdown {
+
+//                 .dropdown-menu {
+//                   padding-top: 15px;
+//                   border-radius: 0;
+//                   background-color: var(--dark, #0B1727);
+//                   border: transparent;
+
+//                   li {
+
+//                     a {
+//                       color: #fff;
+//                       padding: 15px;
+//                     }
+
+//                     &.active,
+//                     &:hover {
+//                       a {
+//                         color: #C3251D;
+//                       }
+
+//                     }
+//                   }
+//                 }
+//               }
+//             }
+//           }
+//         }
+//       }
+
+//       .menu-extension {
+//         margin-left: 29px;
+//         margin-top: 0;
+
+//         .btn-1 {
+//           padding: 15px 20px;
+//         }
+//       }
+//     }
+//   }
+
+//   //Sticky
+//   &.sticky-head {
+    
+//     background: var(--dark, #0B1727);
+//   }
+
+// }
+
+//Page
+.is_page {
+  header {
+    // background: var(--dark, #0B1727);
+  }
+}
+
+.mobile-menu {
+  background-color: #0B1727 !important;
+
+  .navbar-nav {
+    li {
+      &.active {
+        >a {
+          color: #C3251D;
+        }
+
+      }
+    }
+  }
+
+  .nav-link {
+    color: #fff;
+    text-align: left;
+    font-family: Barlow;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 100%;
+    /* 16px */
+    text-transform: uppercase;
+
+    &.active,
+    &:active,
+    &:focus {
+      color: #ffff;
+    }
+  }
+
+  .dropdown-menu {
+    background-color: transparent;
+
+
+
+    .menu-item {
+      white-space: wrap !important;
+
+      &.active a {
+        color: #C3251D;
+
+
+      }
+
+      a {
+        color: #fff;
+        text-align: left;
+        font-family: Barlow;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 150%;
+        white-space: normal !important;
+        /* 16px */
+        text-transform: uppercase;
+
+        &:focus,
+        &:focus-visible,
+        &:active,
+        &:target,
+        &:visited {
+          outline: none !important;
+          background: transparent !important;
+        }
+
+        &:active {
+          background-color: #fff;
+        }
+      }
+    }
+  }
+
+
+}
+
+.remove_scroll {
+  .opener {
+    svg {
+      color: #C3251D !important;
+    }
+  }
+}

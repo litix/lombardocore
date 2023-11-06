@@ -1,0 +1,102 @@
+@use "./mixins" as *;
+@use "./variables.scss" as *;
+
+/********************** Basic Styles **********************/
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 300px;
+}
+
+.bg_white {
+  background-color: $white
+}
+.post-box {
+  display: none;
+}
+
+:focus,
+:focus-visible,
+:active,
+:target,
+:visited {
+  // outline: none !important;
+  // background: transparent !important;
+  // display: none;
+}
+
+
+.dropdown-item:focus,
+.dropdown-item:hover {
+  color: red;
+  text-decoration: none;
+  background-color: transparent;
+}
+
+.mobile-menu {
+  display: none;
+
+  @media (max-width:1024px) {
+    display: block;
+  }
+}
+
+.noimage {
+  position: relative;
+
+  &::before {
+    @include absolute;
+    background-color: #082248;
+    z-index: 1;
+
+  }
+
+  &::after {
+    @include absolute;
+    background: url(./images/theme/logo.svg) no-repeat center top;
+    width: 100%;
+    min-height: 50px;
+    z-index: 2;
+    top: 45%;
+  }
+}
+
+.bg_light {
+  background: var(--Light, #F9FBFF);
+}
+
+@media only screen and (max-width: 1024px) {
+  // .element.no-br br {
+  //   display: block !important;
+  // }
+}
+
+.mh {
+  min-height: 500px;
+}
+
+.page-404 {
+  .pic-404 {
+    margin-top: 10% !important;
+  }
+
+  .info-404 {
+
+    .text {
+      @include title;
+    }
+
+    .link {
+      display: inline-flex;
+
+      .btn-1 {
+        max-width: 150px;
+        background-color: $color3 !important;
+      }
+    }
+  }
+}
+
+.tracking-in-contract {
+  @include tracking-in-contract;
+}

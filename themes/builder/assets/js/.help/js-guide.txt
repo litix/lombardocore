@@ -1,0 +1,40 @@
+## create random quotes
+
+var quotes = [
+    'Hello',
+    'Hi',
+    '"I love to play with strings!"',
+    '"Meow! What is for dinner?"',
+    '"That is puuuurfect!"',
+    '"I has 9 Lives!"',
+    '"Time spent with cat is never wasted."',
+    '"Ajax is soap!"'
+]
+
+function newQuote() {
+    var dUser = document.getElementById('ajax_User').value;
+    var elementN = document.getElementById("quoteDisplay");
+    
+    if(dUser != ''){
+        
+        var randomNumber = Math.floor(Math.random() * (quotes.length));
+        if(randomNumber == 0 || randomNumber == 1) {
+            elementN.innerHTML = quotes[randomNumber] + 
+                ' <strong>' + dUser + '</strong>, Welcome!';
+        } else {
+            elementN.innerHTML = quotes[randomNumber];
+        }
+        
+        elementN.classList.remove("cat_error_msg");
+    
+    } else {
+        
+        var catError = '<div class="msg_error">' + 
+            '<strong>Error:</strong> Booo! The answer is empty!' + 
+            '</div>';
+        document.getElementById('quoteDisplay').innerHTML = catError;
+        
+        elementN.classList.add("cat_error_msg");
+        
+    }
+}

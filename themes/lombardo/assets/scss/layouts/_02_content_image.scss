@@ -1,0 +1,136 @@
+@use "../mixins" as *;
+@use "../variables.scss" as *;
+
+/********************** content_image_layout **********************/
+.element {
+    &.content_image_layout {
+        position: relative;
+
+        &::before {
+            @include absolute;
+            z-index: -1;
+            // background: url(./images/theme/home-overlay-1.png) no-repeat center top;
+            background-size: cover;
+        }
+
+        .wrap {
+            padding-top: 100px;
+            padding-bottom: 35px;
+
+            @media (max-width:1024px) {
+                padding: 0;
+                padding-bottom: 35px;
+            }
+        }
+
+        .overlay {
+            background: url(./images/theme/layout-bg-1.png) no-repeat center top;
+            background-size: cover;
+        }
+
+        .basic {
+            display: flex;
+            gap: 100px;
+            align-items: center;
+
+            @media (max-width:1024px) {
+                flex-direction: column;
+                gap: 30px;
+            }
+
+
+
+            .content {
+                flex: 0 0 500px;
+
+                @media (max-width:1024px) {
+                    flex: 1;
+                }
+
+                .heading {
+                    @include heading;
+                }
+
+                .title {
+                    @include title;
+                    margin-top: 10px
+                }
+
+                .border {
+                    width: 60px;
+                    height: 3px;
+                    background: #0588BF;
+                }
+
+                .description {
+                    margin-top: 27px;
+                    @include description;
+                }
+
+                .link {
+                    margin-top: 30px;
+                    ;
+                }
+            }
+
+            .image {
+                flex: 0 0 570px;
+
+                @media (max-width:1024px) {
+                    flex: 1;
+                }
+
+                .item {
+                    @media (max-width:1024px) {
+                        height: 600px;
+                    }
+
+                    @media (max-width:600px) {
+                        height: 300px;
+                    }
+
+                    img {
+                        object-fit: cover;
+                        height: 100% !important;
+
+                        @media (max-width:600px) {
+                            object-fit: contain;
+                        }
+                    }
+                }
+
+                &.images {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 30px;
+
+
+                }
+            }
+
+            &.reverse {
+                display: flex;
+                gap: 100px;
+                flex-direction: row-reverse;
+
+                @media (max-width:1024px) {
+                    flex-direction: column;
+                    gap: 30px;
+                }
+            }
+
+        }
+
+        @media (max-width:1112px) {}
+
+        @media (max-width:1024px) {}
+
+        @media (max-width:844px) {}
+
+        @media (max-width:834px) {}
+
+        @media (max-width:768px) {}
+
+        @media (max-width:600px) {}
+    }
+}

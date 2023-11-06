@@ -1,0 +1,17 @@
+.lsarrows {
+    /* from lightslider */
+    width: 10px;
+    height: 27px;
+    cursor: pointer;
+    position: absolute;
+    top: calc(50% - 17px);
+}
+
+.lsarrows.prev {
+    transform: rotate(180deg);
+    left: -10px;
+}
+
+.lsarrows.next {
+    right: -10px;
+}

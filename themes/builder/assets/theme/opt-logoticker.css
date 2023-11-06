@@ -1,0 +1,23 @@
+.owl-noslide {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.owl-noslide .item .logo,
+.owl-logo-ticker .item .logo { 
+    max-height: 25px;
+    max-width: 90%;
+}
+
+.logo-ticker {
+    position: relative;
+}
+
+.logo-ticker .owlprev {
+    left: 0;
+}
+
+.logo-ticker .owlnext {
+    right: 0;
+}

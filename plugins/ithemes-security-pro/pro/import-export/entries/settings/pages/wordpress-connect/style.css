@@ -1,0 +1,12 @@
+.itsec-import-wordpress-connect .itsec-message-list {
+  margin-top: 1rem;
+}
+.itsec-import-wordpress-connect .itsec-message-list:first-child {
+  margin-top: 0;
+}
+.itsec-import-wordpress-connect .itsec-message-list:last-child {
+  margin-bottom: 0;
+}
+.itsec-import-wordpress-connect .components-card__body:empty {
+  display: none;
+}/*# sourceMappingURL=style.css.map */

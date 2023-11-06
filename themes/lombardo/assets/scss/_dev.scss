@@ -1,0 +1,25 @@
+/* body:not(.wp-admin) - Development Mode Only ---------------------- */
+
+body:not(.wp-admin) {
+    //Old
+    //background: url(images/uploads/about.jpg) center top no-repeat;
+    position: relative;
+  
+    &::before {
+      width: 100%;
+      height: 100%;
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      background: url(./images/layouts/01-home.jpg) center top no-repeat;
+      z-index: -1;
+      opacity:1;
+    }
+  
+    .dev-wrapper {
+      position: relative;
+      z-index: 1;
+      opacity: .6;
+    }
+  }

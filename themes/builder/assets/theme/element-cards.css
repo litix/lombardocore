@@ -1,0 +1,81 @@
+
+[data-design*="cards-cc-01"] .flex-item .item {
+    padding-bottom: 90%;
+
+    position: relative;
+    background-color: rgba(0,0,0,0.1);
+    display: block;
+    overflow: hidden;
+}
+
+/**/
+[data-design*="cards-cc-01"] .overlay.color {
+    background-color: rgba(20,20,20);
+}
+
+[data-design*="cards-cc-01"] .overlay-bg {
+    opacity: 0.3;
+}
+
+/**/
+[data-design*="cards-cc-01"] .dback {
+    transition: 0.5s;
+}
+
+[data-design*="cards-cc-01"] .dfront,
+[data-design*="cards-cc-01"] .overlay-bg,
+[data-design*="cards-cc-01"] .overlay.color {
+    transition: 0.5s;
+    z-index: 2;
+}
+
+[data-design*="cards-cc-01"] .dfront,
+[data-design*="cards-cc-01"] .dback {
+    position: absolute;
+}
+
+[data-design*="cards-cc-01"] .dback { 
+    padding: 20px;
+    opacity: 0;
+}
+
+[data-design*="cards-cc-01"] .dfront {
+    width: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+}
+
+/**/
+[data-design*="cards-cc-01"] .diconn img {
+    filter: brightness(0) invert(1);
+}
+
+[data-design*="cards-cc-01"] .ititle {
+    margin-top: 10px;
+    letter-spacing: 0.03em;
+}
+
+[data-design*="cards-cc-01"] .ptext,
+[data-design*="cards-cc-01"] .dtext {
+    font-size: 90%;
+}
+
+[data-design*="cards-cc-01"] .dfront .ititle {
+    color: var(--color6);
+}
+
+/**/
+[data-design*="cards-cc-01"] .item:hover .dback {
+    opacity: 1;
+}
+
+[data-design*="cards-cc-01"] .item:hover .dfront {
+    top: -25%;
+    opacity: 0;
+}
+
+[data-design*="cards-cc-01"] .item:hover .overlay.color,
+[data-design*="cards-cc-01"] .item:hover .overlay-bg {
+    opacity: 0;
+}

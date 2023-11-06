@@ -1,0 +1,19 @@
+.itsec-site-type-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(20rem, 100%), 1fr));
+  grid-gap: 1rem;
+}
+.itsec-site-type-list li {
+  margin-bottom: 0;
+}
+.itsec-site-type-list .itsec-selectable-card {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: stretch;
+  flex-direction: column;
+  text-align: left;
+}
+.itsec-site-type-list .itsec-selectable-card .components-card {
+  height: 100%;
+}/*# sourceMappingURL=style.css.map */

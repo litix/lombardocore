@@ -1,0 +1,10 @@
+.simplemap {
+    overflow: hidden;
+    position: relative;
+}
+
+.simplemap a[href="https://simplemaps.com"] {
+    height: 0px;
+    bottom: -10px;
+    position: absolute;
+}
